@@ -11,7 +11,9 @@ const Navbar = () => {
                 src="/logo.png" 
                 width={60} 
                 height={30} 
-                alt="Logo" />
+                alt="Logo" 
+                />
+                <span className="text-sm tracking-tight text-white">RealES</span>
             </div>
         </div>
     </nav>
