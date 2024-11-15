@@ -1,9 +1,19 @@
+"use client";
+
+import { Menu, X } from "lucide-react"
+import { useState } from "react";
 import { NAV_LINKS } from "@/constants"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "./ui/button"
 
 const Navbar = () => {
+    const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+
+    const toggleNavbar = () => {
+        setMobileDrawerOpen(!mobileDrawerOpen);
+    };
+
   return (
     <nav className="fixed top-2 z-50 w-screen px-4">
         <div className="container flex items-center justify-between rounded-lg 
@@ -38,6 +48,12 @@ const Navbar = () => {
                 <Button className="bg-slate-800">
                     Sign Up
                 </Button>
+            </div>
+            <div className="flex-col justify-end text-white md:flex 
+            lg:hidden">
+                <button onClick={toggleNavbar}>
+                        {mobileDrawerOpen ? <X /> : <Menu />}
+                </button>
             </div>
         </div>
     </nav>
