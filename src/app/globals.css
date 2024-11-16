@@ -64,3 +64,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.hero {
+  background-image: url("../../public/home.jpeg");
+  background-size: cover;
+}
