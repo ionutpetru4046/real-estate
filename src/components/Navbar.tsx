@@ -56,8 +56,30 @@ const Navbar = () => {
                 </button>
             </div>
         </div>
+        {mobileDrawerOpen && (
+            <div className="rounded-md bg-black lg:hidden">
+                <ul className="flex flex-col items-center">
+                    {NAV_LINKS.map((item, index) => (
+                        <li key={index} className="py-6">
+                            <Link 
+                            className="text-sm text-white hover:text-neutral-500" 
+                            href={item.url}
+                            >
+                                {item.title}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+                <div className="flex items-center justify-center pb-8 
+                text-white lg:hidden">
+                    <Button variant="outline" className="mr-2 bg-bl">
+                        Sign In
+                    </Button>
+                </div>
+            </div>
+        )}
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;
