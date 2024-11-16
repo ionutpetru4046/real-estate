@@ -75,6 +75,7 @@ const Navbar = () => {
                     <Button variant="outline" className="mr-2 bg-bl">
                         Sign In
                     </Button>
+                    <Button className="bg-slate-800">Sign Up</Button>
                 </div>
             </div>
         )}
