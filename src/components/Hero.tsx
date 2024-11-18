@@ -1,4 +1,5 @@
 import { HERO } from "@/constants"
+import SearchForm from "./SearchForm"
 
 const Hero = () => {
   return (
@@ -13,6 +14,7 @@ const Hero = () => {
             {HERO.description}
           </p>
         </div>
+        <SearchForm />
       </div>
     </div>
   )
