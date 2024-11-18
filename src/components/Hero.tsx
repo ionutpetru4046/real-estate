@@ -9,7 +9,7 @@ const Hero = () => {
           lg:text-6xl">
             {HERO.title}
           </h1>
-          <p className="p-4 text-center text-2xl text-white md:3xl lg:text-3xl">
+          <p className="p-4 text-center text-white">
             {HERO.description}
           </p>
         </div>
