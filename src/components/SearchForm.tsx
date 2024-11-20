@@ -13,9 +13,23 @@ import { Calendar } from "./ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 const SearchForm = () => {
+  const form = useForm ();
   return (
-    <div>
-      SearchForm
+    <div className="grid w-full items-end gap-4 rounded-lg bg-black 
+    sm:grid-cols-2 lg:grid-cols-4">
+      <Form {...form}>
+        <FormField control={form.control} name="Address" render={({field}) =>{
+          return (
+            <FormItem>
+              <FormLabel className="text-white">
+                Property
+              </FormLabel>
+            </FormItem>
+          )
+        }}>
+
+        </FormField>
+      </Form>
     </div>
   )
 }
