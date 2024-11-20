@@ -24,6 +24,11 @@ const SearchForm = () => {
               <FormLabel className="text-white">
                 Property
               </FormLabel>
+              <Select>
+                <SelectTrigger>
+                  <SelectValue placeholder="Type" />
+                </SelectTrigger>
+              </Select>
             </FormItem>
           )
         }}>
