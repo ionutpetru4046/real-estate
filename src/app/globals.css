@@ -70,3 +70,8 @@
   background-size: cover;
   background-position: 30%;
 }
+
+.works {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("../../public/works.jpeg");
+  background-size: cover;
+}
