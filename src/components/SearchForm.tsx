@@ -91,6 +91,7 @@ const SearchForm = () => {
             </FormItem>
           )}
         />
+        <Button type="submit" className="bg-slate-800">Search</Button>
       </Form>
     </div>
   )
