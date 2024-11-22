@@ -28,6 +28,11 @@ const SearchForm = () => {
                 <SelectTrigger>
                   <SelectValue placeholder="Type" />
                 </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="buy">Buy</SelectItem>
+                  <SelectItem value="sell">Sell</SelectItem>
+                  <SelectItem value="rent">Rent</SelectItem>
+                </SelectContent>
               </Select>
             </FormItem>
           )
