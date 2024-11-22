@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -5,18 +6,18 @@ import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/form";
 import { Input } from "./ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
-import { DateValues } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { Calendar } from "./ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { format } from "date-fns";
 
 const SearchForm = () => {
   const form = useForm ();
   return (
     <div className="grid w-full items-end gap-4 rounded-lg bg-black 
-    sm:grid-cols-2 lg:grid-cols-4">
+    sm:grid-cols-2 lg:grid-cols-4 p-6">
       <Form {...form}>
         <FormField 
         control={form.control} 
@@ -26,7 +27,7 @@ const SearchForm = () => {
             <FormItem>
               <FormLabel className="text-white">Property</FormLabel>
               <Select>
-                <SelectTrigger>
+                <SelectTrigger className="bg-white">
                   <SelectValue placeholder="Type" />
                 </SelectTrigger>
                 <SelectContent>
@@ -40,12 +41,12 @@ const SearchForm = () => {
         }}>
 
         </FormField>
-        <FormField control={form.control} name="Address" render={({field}) => {
+        <FormField control={form.control} name="Address" render={({ field }) => {
           return (
             <FormItem>
               <FormLabel className="text-white">Address</FormLabel>
               <FormControl>
-                <Input placeholder="Search by Address" />
+                <Input className="bg-white" placeholder="Search by Address" />
               </FormControl>
             </FormItem>
           );
@@ -56,14 +57,14 @@ const SearchForm = () => {
           name="dob"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Buy/Sell</FormLabel>
+              <FormLabel className="text-white">Buy/Sell Date</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
                       variant={"outline"}
                       className={cn(
-                        "w-full pl-3 text-left font-normal",
+                        "w-[240px] pl-3 text-left font-normal",
                         !field.value && "text-muted-foreground"
                       )}
                     >
@@ -91,7 +92,7 @@ const SearchForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="bg-slate-800">Search</Button>
+        <Button type="submit" className="bg-slate-800 text-white">Search</Button>
       </Form>
     </div>
   )
