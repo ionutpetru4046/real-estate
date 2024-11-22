@@ -39,6 +39,16 @@ const SearchForm = () => {
         }}>
 
         </FormField>
+        <FormField control={form.control} name="Address" render={({field}) => {
+          return (
+            <FormItem>
+              <FormLabel className="text-white">Address</FormLabel>
+              <FormControl>
+                <Input />
+              </FormControl>
+            </FormItem>
+          )
+        }}></FormField>
       </Form>
     </div>
   )
