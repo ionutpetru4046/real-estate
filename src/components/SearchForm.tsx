@@ -18,12 +18,13 @@ const SearchForm = () => {
     <div className="grid w-full items-end gap-4 rounded-lg bg-black 
     sm:grid-cols-2 lg:grid-cols-4">
       <Form {...form}>
-        <FormField control={form.control} name="Address" render={({field}) =>{
+        <FormField 
+        control={form.control} 
+        name="Address" 
+        render={({ field }) =>{
           return (
             <FormItem>
-              <FormLabel className="text-white">
-                Property
-              </FormLabel>
+              <FormLabel className="text-white">Property</FormLabel>
               <Select>
                 <SelectTrigger>
                   <SelectValue placeholder="Type" />
@@ -44,11 +45,52 @@ const SearchForm = () => {
             <FormItem>
               <FormLabel className="text-white">Address</FormLabel>
               <FormControl>
-                <Input />
+                <Input placeholder="Search by Address" />
               </FormControl>
             </FormItem>
-          )
+          );
         }}></FormField>
+
+        <FormField
+          control={form.control}
+          name="dob"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-white">Buy/Sell</FormLabel>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <FormControl>
+                    <Button
+                      variant={"outline"}
+                      className={cn(
+                        "w-full pl-3 text-left font-normal",
+                        !field.value && "text-muted-foreground"
+                      )}
+                    >
+                      {field.value ? (
+                        format(field.value, "PPP")
+                      ) : (
+                        <span>Pick a date</span>
+                      )}
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                    </Button>
+                  </FormControl>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={field.value}
+                    onSelect={field.onChange}
+                    disabled={(date) =>
+                      date > new Date() || date < new Date("1900-01-01")
+                    }
+                    initialFocus
+                  />
+                </PopoverContent>
+              </Popover>
+            </FormItem>
+          )}
+        />
       </Form>
     </div>
   )
