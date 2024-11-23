@@ -10,8 +10,7 @@ const HowItWorks = () => {
       </h2>
       <p className="mx-auto my-10 max-w-4xl text-center text-neutral-800">{HOW_IT_WORKS.content}</p>
       <div className="works relative h-[640px] rounded-xl">
-        <div className="absolute left-0 top-0 h-full overflow-y-hidden 
-        p-10 md:p-20">
+        <div className="absolute left-0 top-0 h-full overflow-y-hidden p-10 md:p-20">
             {HOW_IT_WORKS.steps.map((step, index) => (
                 <div key={index}>
                     <div className="flex items-center">
