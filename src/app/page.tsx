@@ -2,6 +2,7 @@ import FeaturedProperties from "@/components/FeaturedProperties";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import Navbar from "@/components/Navbar";
+import Services from "@/components/Services";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
      <Hero />
      <HowItWorks />
      <FeaturedProperties />
+     <Services />
     </>
   )
 }
