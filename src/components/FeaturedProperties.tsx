@@ -1,4 +1,5 @@
 import { FEATURED_PROPERTIES } from "@/constants"
+import { Star } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -19,6 +20,16 @@ function FeaturedProperties() {
                             width={300}
                             height={300}
                             alt={property.name} />
+                            <div className="text-center">
+                               <h6 className="mb-5 mt-2 font-medium">{property.name}</h6>
+                               <span className="mb-5 mt-2">${property.price}</span>
+                               <div className="mt-2 flex items-center justify-center">
+                                <Star fill="gold" strokeWidth={0} className="mr-2" />
+                                <span className="text-sm">
+                                    {property.rating} ({property.reviews} reviews)
+                                </span>
+                               </div>
+                            </div>
                         </div>
                     </Link>
                 </div>
