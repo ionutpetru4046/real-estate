@@ -11,11 +11,20 @@ const Services = () => {
           <div className="p-6">
             <Image
             className="rounded-xl object-cover" 
-            src="service.jpeg" 
+            src="/service.jpeg" 
             width={600} 
             height={600} 
             alt="services" />
           </div>
+        </div>
+        <div className="w-full lg:w-1/2">
+          <h2 className="mt-10 text-5xl lg:text-7xl">
+            We are 
+            <span className="leading-snug lg:block">available in</span> 
+            <span className="font-bold">
+              10+ Countries!
+            </span>
+          </h2>
         </div>
       </div>
     </div>
