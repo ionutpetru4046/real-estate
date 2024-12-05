@@ -1,3 +1,4 @@
+import { SERVICES_TEXT } from "@/constants"
 import Image from "next/image"
 
 const Services = () => {
@@ -18,13 +19,14 @@ const Services = () => {
           </div>
         </div>
         <div className="w-full lg:w-1/2">
-          <h2 className="mt-10 text-5xl lg:text-7xl">
+          <h2 className="mt-10 text-5xl lg:text-7xl px-2">
             We are 
-            <span className="leading-snug lg:block">available in</span> 
+            <span className="leading-snug lg:block"> available in</span> 
             <span className="font-bold">
               10+ Countries!
             </span>
           </h2>
+          <p className="max-w-xl py-6 text-lg tracking-tighter lg:pr-20 px-2">{SERVICES_TEXT}</p>
         </div>
       </div>
     </div>
