@@ -1,3 +1,5 @@
+import { ABOUT_US_TEXT } from "@/constants"
+
 const AboutUs = () => {
   return (
     <div className="container mx-auto my-20 border-b pb-10">
@@ -6,6 +8,9 @@ const AboutUs = () => {
         lg:text-5xl">
           About Us
         </h2>
+        <p className="py-6 text-center text-lg tracking-tighter lg:pr-20">
+            {ABOUT_US_TEXT}
+        </p>
       </div>
     </div>
   )
