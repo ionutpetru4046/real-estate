@@ -12,6 +12,13 @@ const AboutUs = () => {
             {ABOUT_US_TEXT}
         </p>
       </div>
+      <div className="flex flex-wrap text-center">
+        <div className="w-full border-neutral-700 p-6 lg:w-1/2 
+        lg:border-r">
+          <p className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-800 
+          bg-clip-text text-5xl text-transparent lg:text-7xl">5600+</p>
+        </div>
+      </div>
     </div>
   )
 }
