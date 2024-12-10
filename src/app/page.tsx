@@ -4,6 +4,7 @@ import HowItWorks from "@/components/HowItWorks";
 import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
 import AboutUs from "@/components/ui/AboutUs";
+import Testimonials from "@/components/ui/Testimonials";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
      <FeaturedProperties />
      <Services />
      <AboutUs />
+     <Testimonials />
     </>
   )
 }
