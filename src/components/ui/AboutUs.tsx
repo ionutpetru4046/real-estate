@@ -21,6 +21,11 @@ const AboutUs = () => {
             Clients from 2018
           </p>
         </div>
+        <div className="w-full p-6 lg:w-1/2">
+          <p className="bg-gradient-to-r from-green-400 to-green-800 
+          bg-clip-text text-5xl text-transparent lg:text-7xl">2500+</p>
+          <p className="my-8 font-medium">Properties Sold!</p>
+        </div>
       </div>
     </div>
   )
