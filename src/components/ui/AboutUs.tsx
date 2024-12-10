@@ -17,6 +17,9 @@ const AboutUs = () => {
         lg:border-r">
           <p className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-800 
           bg-clip-text text-5xl text-transparent lg:text-7xl">5600+</p>
+          <p className="my-8 font-medium">
+            Clients from 2018
+          </p>
         </div>
       </div>
     </div>
