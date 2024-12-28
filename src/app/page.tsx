@@ -1,3 +1,4 @@
+import Faq from "@/components/Faq";
 import FeaturedProperties from "@/components/FeaturedProperties";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
@@ -16,6 +17,7 @@ const Home = () => {
      <Services />
      <AboutUs />
      <Testimonials />
+     <Faq />
     </>
   )
 }
