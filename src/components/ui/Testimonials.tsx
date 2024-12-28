@@ -11,13 +11,23 @@ const Testimonials = () => {
         <div className="flex flex-wrap">
           {TESTIMONIALS.map((testimonial, index) => (
             <div key={index} className="w-full md:w-1/2 lg:w-1/4 p-2">
+              <div className="rounded-xl border p-4">
+
               <div className="flex items-center">
                 <Image className="mr-4 rounded-full border-4 border-neutral-400" 
                   src={testimonial.image} 
                   alt={testimonial.name} 
                   width={80}
                   height={80} />
-                <h4 className="w-full">{testimonial.name}</h4>
+                  <div>
+                    <h4 className="w-full">{testimonial.name}</h4>
+                    <span className="text-sm text-neutral-600">
+                    {testimonial.instagram}
+                    </span>
+                  </div>
+              </div>
+               <p className="p-4">{testimonial.feedback}</p>
+               <p className="text-sm text-neutral-400">{testimonial.city_country}</p>
               </div>
             </div>
           ))}
