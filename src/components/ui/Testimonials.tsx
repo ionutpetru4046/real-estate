@@ -1,4 +1,5 @@
 import { TESTIMONIALS } from "@/constants"
+import Image from "next/image"
 
 const Testimonials = () => {
   return (
@@ -10,8 +11,12 @@ const Testimonials = () => {
         <div className="flex flex-wrap">
           {TESTIMONIALS.map((testimonial, index) => (
             <div key={index} className="w-full md:w-1/2 lg:w-1/4 p-2">
-              <div className="">
-
+              <div className="flex items-center">
+                <Image className="mr-4 rounded-full border-4 border-neutral-400" 
+                src={testimonial.image} 
+                alt={testimonial.name} 
+                width={80} 
+                height={80} />
               </div>
             </div>
           ))}
