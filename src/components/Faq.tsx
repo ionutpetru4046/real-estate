@@ -1,4 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { FAQ } from "@/constants";
 
 const Faq = () => {
   return (
@@ -7,30 +8,12 @@ const Faq = () => {
         FAQ
       </h2>
       <Accordion type="single" collapsible className="w-full">
-        <AccordionItem value="some text">
-           <AccordionTrigger>
-                Some more text   
-           </AccordionTrigger>
-           <AccordionContent>
-                Answer   
-           </AccordionContent> 
-        </AccordionItem>
-        <AccordionItem value="some text">
-           <AccordionTrigger>
-                Some more text   
-           </AccordionTrigger>
-           <AccordionContent>
-                Answer   
-           </AccordionContent> 
-        </AccordionItem>
-        <AccordionItem value="some text">
-           <AccordionTrigger>
-                Some more text   
-           </AccordionTrigger>
-           <AccordionContent>
-                Answer   
-           </AccordionContent> 
-        </AccordionItem>
+          {FAQ.map((faq, index) => (
+               <AccordionItem key={index} value={faq.value}>
+                    <AccordionTrigger>{faq.question}</AccordionTrigger>
+                    <AccordionContent>{faq.answer}</AccordionContent> 
+               </AccordionItem>    
+          ))}
       </Accordion>
     </div>
   )
